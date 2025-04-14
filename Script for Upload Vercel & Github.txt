@@ -1,0 +1,145 @@
+Jika kamu ingin menggunakan Git untuk mengunggah website undangan pernikahan ke Vercel, berikut langkah-langkah lengkapnya:
+
+---
+
+====
+https://wedding-abil-ambar.vercel.app/?to=Putri%20Ambarwati
+====
+
+ Langkah 1: Persiapan Git dan Node.js  
+1. Pastikan Git dan Node.js sudah terpasang di komputer.  
+   - Cek Git:  
+     bash
+     git --version
+     
+   - Cek Node.js:  
+     bash
+     node --version
+     
+2. Jika belum terpasang, unduh dan instal dari:
+   - [Git](https://git-scm.com/downloads)
+   - [Node.js](https://nodejs.org)
+
+---
+
+ Langkah 2: Buat Repositori Git untuk Website  
+1. Buka Command Prompt/Terminal dan arahkan ke folder proyek website kamu:
+   bash
+   cd path/to/website-folder
+   
+2. Inisialisasi Git:
+   bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   
+   Ini akan membuat repositori lokal dan menyimpan perubahan awal.
+
+---
+
+ Langkah 3: Hubungkan Git dengan GitHub  
+1. Buat repositori baru di GitHub dengan mengunjungi [github.com](https://github.com).
+2. Salin URL repositori GitHub (misalnya https://github.com/username/namaproject.git).
+3. Kembali ke Terminal dan hubungkan repositori lokal dengan GitHub:
+   bash
+   git remote add origin https://github.com/cumansabun/Wedding-of-Abil-Ambar.git
+   git branch -M main
+   git push -u origin main
+   
+
+---
+
+ Langkah 4: Hubungkan dan Deploy dari Vercel  
+1. Login ke Vercel di [vercel.com](https://vercel.com).
+2. Di dashboard Vercel, klik "New Project".
+3. Hubungkan akun GitHub kamu dengan Vercel jika belum terhubung.
+4. Pilih repositori GitHub yang baru saja kamu buat dan klik "Import".
+5. Vercel akan mendeteksi bahwa proyek kamu berbasis HTML (statis). Klik "Deploy".
+
+---
+
+ Langkah 5: Verifikasi dan Sebarkan Link  
+1. Setelah proses deploy selesai, kamu akan diberikan URL publik seperti:
+   
+   https://namaproject.vercel.app
+   
+2. Kunjungi link tersebut untuk memastikan website undangan kamu tampil dengan benar.
+3. Bagikan URL kepada tamu undangan!
+
+---
+
+ Tahap Lanjutan (Opsional)  
+- Update otomatis: Setiap kali kamu melakukan perubahan di kode dan melakukan git push, Vercel akan otomatis deploy versi terbaru.
+- Custom domain: Tambahkan domain khusus di Settings > Domains di dashboard Vercel.
+
+Dengan Git, kamu bisa dengan mudah mengelola versi dan memperbarui website kapan saja, serta memanfaatkan fitur otomatisasi dari Vercel untuk continuous deployment.
+
+
+=========================
+
+untuk update website
+
+Berikut adalah langkah-langkah untuk **melakukan update website** di GitHub dan Vercel setelah ada perubahan pada file HTML, CSS, atau JavaScript kamu. Setiap kali kamu melakukan perubahan dan mendorongnya (push) ke GitHub, Vercel akan **otomatis memperbarui website**. 
+
+---
+
+### **Langkah 1: Buat Perubahan pada File HTML**
+1. **Edit file HTML/CSS/JS** di komputer kamu (pastikan sudah tersimpan dalam folder proyek yang benar).
+2. Buka **Terminal/Command Prompt** dan arahkan ke folder proyek kamu:
+   ```bash
+   cd path/to/website-folder
+   ```
+
+---
+
+### **Langkah 2: Tambahkan dan Commit Perubahan di Git**  
+Setelah mengedit file, lakukan commit perubahan agar Git mendeteksi dan menyimpannya.
+
+1. Cek status perubahan:
+   ```bash
+   git status
+   ```
+   Kamu akan melihat daftar file yang berubah.
+
+2. Tambahkan file yang sudah diubah:
+   ```bash
+   git add .
+   ```
+3. Buat commit untuk menyimpan perubahan:
+   ```bash
+   git commit -m "Update pada file HTML undangan"
+   ```
+
+---
+
+### **Langkah 3: Upload Perubahan ke GitHub (Push)**
+Setelah membuat commit, kamu perlu mendorong (push) perubahan tersebut ke GitHub agar Vercel bisa memperbarui website.
+
+1. Lakukan push ke branch utama (biasanya **main**):
+   ```bash
+   git push origin main
+   ```
+2. Pastikan kamu login ke GitHub jika diminta dan tunggu proses selesai.
+
+---
+
+### **Langkah 4: Verifikasi Update di Vercel**
+1. Setelah push selesai, Vercel akan **otomatis mendeteksi** perubahan dan memulai proses **redeploy**.  
+2. Kamu bisa melihat proses ini di **dashboard Vercel** pada project terkait.
+   - Buka [vercel.com](https://vercel.com) dan pilih project kamu.
+   - Di bagian **Deployments**, kamu akan melihat status deployment terbaru.
+
+3. Setelah proses selesai, **URL website** kamu (misalnya `https://namaproject.vercel.app`) akan otomatis memuat perubahan terbaru.
+
+---
+
+### **Langkah 5: Troubleshooting (Opsional)**
+- **Cache browser** kadang-kadang membuat perubahan tidak terlihat langsung. Pastikan untuk **membersihkan cache** atau buka link dalam mode **Incognito/Private Mode**.
+- Jika ada error saat deploy, cek **log deployment** di Vercel untuk melihat apa yang salah dan perbaiki jika diperlukan.
+
+---
+
+### **Penutup**  
+Setiap kali ada perubahan pada file di proyek lokal, kamu hanya perlu mengulangi langkah-langkah **add > commit > push** di Git. Vercel akan **otomatis memperbarui website** tanpa perlu upload manual, membuat proses ini sangat efisien.
+
+Semoga ini membantu, dan selamat menyebarkan undangan online kamu! 🎉
